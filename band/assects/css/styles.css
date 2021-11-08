@@ -1,0 +1,482 @@
+/*reset*/
+*{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+#main{
+
+}
+html {
+    font-family: helvetica, arial, sans-serif;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left;
+}
+.col-third{  
+    width: 33.33333333%;
+}
+.col-half{ 
+    width: 50% ;
+}
+.clear{
+    clear: both;
+    
+}
+
+#header{
+    height: 46px;
+    background-color: #000 ;
+
+    /* fixed */
+    position : fixed ; 
+    
+    top : 0 ;/* make sure the header is always in the top */
+    right: 0 ; 
+    left : 0 ; 
+    z-index:  1 ;
+}
+#nav >li{
+    display: inline-block;
+} 
+
+#nav li {
+    list-style: none;
+    position: relative;
+    
+    
+}
+#nav > li >a {
+    color:  #fff;
+    text-transform: uppercase;
+
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding:16px ;
+}
+#nav > li a:hover {
+    background-color: #ccc; 
+    color: #000;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav {
+    top : 100% ; /* 2 thẻ cha và con nằm dưới nhau */
+    left : 0 ; 
+
+    
+    position : absolute;
+    display:  none;
+    background-color: #fff ; 
+    
+}
+
+#nav .subnav a {
+    color: #000;
+    display: block; 
+    line-height: 12px;
+    padding: 16px 24px 16px 12px;
+    
+}
+/* down-icon */
+#nav-down{
+    font-size: 14px;
+}
+#nav {
+    display: inline-block;
+}
+/* search-icon */
+#header .nav-search  {
+    float: right;
+    color: #fff;
+    line-height: 46px;
+    padding: 0px 20px;
+    font-size: 0.8rem;
+}
+#header .nav-search:hover {
+    background: red;
+}
+
+#slider{
+    position: relative;
+    padding-top: 50% ;
+    margin-top : 46px ; 
+  
+   
+}
+img.source-img {
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+#slider .text-content{
+    position: absolute ;
+    /* bottom: 0 ;  */
+    /* nằm dưới cùng thẻ cha có positon relative */
+    bottom : 48px ; 
+    width  : 100% ;
+    color: #fff ;
+    text-align: center ;
+}
+
+#slider .text-heading{
+    font-weight: 500 ;
+    font-size : 24px ; 
+}
+#slider .text-description{
+    font-size : 15px ; 
+    margin-top: 24px ; 
+}
+
+#content{
+
+}
+#content .content-section{
+    width:900px ; 
+    /* căn giữa khi không có position */
+    margin-left: auto ;
+    margin-right: auto ;
+
+    padding-top: 40px;
+
+}
+
+#content .content-geration
+{
+    text-align : center ;
+    
+    font-size: 28px ;
+    font-weight: 500;
+    letter-spacing:3px ; 
+}
+#content .content-slogain{
+    text-align: center ;
+    margin-top: 25px;
+    font-size: 15px ; 
+    font-size: italic ;
+    opacity  : 0.6 ; 
+}
+#content .about-text{
+    /* display : flex; đây là một cách. */
+
+    margin-top:25px ; 
+    font-size: 15px ; 
+    text-align: justify;
+    line-height: 1.4rem ; 
+}
+#content .member-list{
+    /* display: flex ; */
+    margin-top: 25px;
+}
+#content .member-contain{
+    float: left;
+    width : 33.3333% ; 
+    text-align: center ; 
+    /* căn giữa hai thằng con là member-name và member-img */
+}
+#content .member-name{
+    font-size: 15px;
+    /* căn giữa chữ còn ảnh sẽ bị lệch  */
+}
+
+#content .member-img{
+    margin-top: 15px ;
+    width : 154px ; 
+    border-radius: 4px;
+}
+
+/* tour dates */
+.text-white{
+    color: #fff ;
+    /* làm tăng cái bottom ở cái tour-date nếu không cho thì nó có 1 tý đen thôi */
+    padding-bottom: 70px;
+}
+.tour-date{
+    
+    margin-top: 46px;
+    background-color: #000 ; 
+}
+.tickets-list{
+    margin-top: 40px;
+    background-color: #fff ;
+    color: #000 ;
+   
+}
+.tickets-section{
+    padding: 5px 0px 5px 12px;
+    list-style: none;
+}
+.tickets-list li {
+    border-bottom: 1px solid #000;
+}
+.tickets-left {
+    background-color:#f44336 ;
+    color: #fff ;
+    margin-left :5px ; 
+}
+.tickets-have{
+    float: right;
+    margin-right: 25px;
+    background-color: #000;
+    line-height: 24px;
+    width: 24px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+
+
+.place-list{
+    margin-top: 32px;
+
+}
+
+.place-img{
+    width:100% ; 
+    /* place-item không chứa nổi cái ảnh */
+    padding : 0 8px ;
+    display: block ;  
+   
+}
+.place-img:hover{
+    opacity: 0.7;
+   
+}
+.place-body{
+    background-color: #fff;
+    /* margin-left: 8px ; 
+    padding-top : 8px ; */
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 220px;
+
+}
+.place-heading{
+    font-weight: 15px;
+    padding-top: 24px;
+    padding-left: 24px;
+
+
+}
+.place-day{
+    
+    line-height:60px ; 
+    padding-left: 24px;
+    color: rgb(153, 146, 146) ;
+
+}
+.place-dercise{
+   
+    padding-left: 24px;
+    line-height: 1.4rem;
+
+}
+.place-by-btn{
+    color: #fff ; 
+    background-color: #000 ;
+    margin-top: 15px;
+    margin-left: 24px;
+    padding: 8px 14px;
+    display: inline-block ;
+    text-decoration: none; 
+}
+.place-by-btn:hover{
+    color: #000 ; 
+    background : #ccc ; 
+}
+/* ..................................................... */
+.modal {
+    position: fixed; 
+    top : 0 ; 
+    left : 0 ; 
+    right : 0 ; 
+    bottom : 0 ; 
+    background-color  : rgba(0 , 0 , 0 ,0.3) ; 
+}
+.modal {
+    display: none; 
+    align-items: center ; 
+    justify-content: center ; 
+}
+.open{
+    display : flex ;
+
+
+}
+.modal-container{
+    background-color: #fff ; 
+    width: 900px ; 
+    min-height: 200px;
+    /* responsive */
+    max-width: calc(100%-32px); 
+
+    animation : modalFaceIn ease 1s ; 
+}
+.modal-header {
+    display: flex;
+    /* padding-bottom: 64px; */
+    background: #009688;
+   
+    height: 140px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+}
+/* ----------------------- */
+.modal-container{
+    position: relative;
+  
+}
+.modal-close {
+    position: absolute;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+}
+   
+.modal-close:hover{
+    background: #ccc ; 
+}
+
+ /* ---------------------------------------- */
+.modal-body {
+    padding: 0px 10px;
+}
+.input.modal-input {
+    display: block;
+    height: 30px;
+    width: 98%;
+}
+.modal-input {
+    margin-top : 12px  ; 
+    display: block;
+    width: 98%;
+    height: 30px;
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+}
+.modal-label {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.modal-body {
+    margin-top: 20px;
+    /* margin-bottom: -103px; */
+    padding: 0px 10px;
+    font-size: 18px;
+}
+.modal-pay{
+    color: WHITE;
+    font-size: 1.2rem;
+    display: block;
+    width: 98%;
+    height: 46px;
+    background: #009688;
+    border: none;
+    cursor: pointer;
+}
+.modal-pay:hover {
+    opacity: 0.7; 
+    color: #000 ; 
+}
+.modal-help {
+    /* position: absolute; */
+    /* left: 0; */
+    /* padding-right: 21px; */
+    padding: 20px 26px 20px 0px;
+    right: 0;
+    text-align: right;
+    
+}
+.modal-footer  a {
+    cursor: pointer;
+    color: #13c4b4;
+}
+/* ................................................................ */
+
+@keyframes modalFaceIn{
+    from { 
+        transform: translateY(-100px) ; 
+    }
+    to{
+        transform: translateY(0) ; 
+
+    }
+}
+
+.col-half{
+    width:50% ; 
+}
+.col-full{
+    width:100% ; 
+}
+.col-third{
+    width: 33.33333%;
+}
+
+
+.text-contact{
+    margin-top: 48px ; 
+    line-height: 1.5rem ; 
+}
+.icon-text{
+    font-size:16px ; 
+}
+.icon-text i[class*= "ti-"] {
+    width: 30px ; 
+    display: inline-block  ; 
+   
+}
+.form-control {
+    
+    padding: 10px ; 
+    width : 100% ; 
+    margin-top:8px ; 
+}
+.sua-bo-lao{
+    width: 95% ;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 8px;
+    width: 20%;
+    margin-top: 10px;
+    float: right;
+}
+img.img-content {
+    margin-top: 180px;
+    width: 100%;
+}
+
+#footer{
+
+}
+
+.img-list {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 20px;
+}
+.img-list a {
+    text-decoration: none;
+    color: black;
+    margin-left: 3px;
+}
+.text-footer {
+    margin-bottom: 200px;
+    margin-top: 24px;
+    text-align: center;
+    opacity: 0.8;
+}
